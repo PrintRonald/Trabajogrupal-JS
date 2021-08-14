@@ -1,3 +1,8 @@
+
+
+
+//FUNCIÓN FECHA PÁGINA WEB//
+
 let nav = document.getElementById('mecSoc');
 
 function menu(){
@@ -49,3 +54,32 @@ fechap=[day,month,year].join('-')
 
 };
 
+
+//FUCNIÓN VALIDACIÓN DE FORMULARIO// 
+
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("formulario").addEventListener('submit', validarFormulario); 
+  });
+  
+  function validarFormulario(evento) {
+    evento.preventDefault();
+    var usuario = document.getElementById('usuario').value;
+    if(usuario.length == 0) {
+      alert('Introducir texto en el campo usuario');
+      return;
+    }
+
+    var correo = document.getElementById('correo').value;
+    if(correo.length == 0) {
+      alert('Introducir texto en el campo correo');
+      return;
+    }
+
+
+    var mensaje = document.getElementById('mensaje').value;
+    if (mensaje.length == 0) {
+      alert('Introducir texto en el campo mensaje');
+      return;
+    }
+    this.submit();
+  }
